@@ -1,3 +1,4 @@
 rust
 nano
 mc
+python--%3.6
