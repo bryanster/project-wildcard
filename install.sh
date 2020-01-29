@@ -1,3 +1,4 @@
+#!/bin/ksh
 pkg_add rust
 pkg_add nano
 pkg_add mc
