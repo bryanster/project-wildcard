@@ -1,5 +1,4 @@
 # project-wildcard
 a network protection server  
   
-pkg_add -l requirements.txt
-
+chmod +x ./install.sh
