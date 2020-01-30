@@ -6,4 +6,4 @@ echo "what is your lan interface"
 read lanint
 echo "wan = $wanint" > /etc/pf.conf
 echo "lan = $lanint" >> /etc/pf.conf
-cat./config/pf.conf >> /etc/pf.conf
+cat ./config/pf.conf >> /etc/pf.conf
