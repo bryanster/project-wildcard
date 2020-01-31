@@ -18,3 +18,4 @@ chmod 777 /scan
 echo "tcpdump -i $wanint -w ./wan.pcap" >> ./bin/capture.sh
 echo "tcpdump -i $lanint -w ./lan.pcap" >> ./bin/capture.sh
 cp ./bin/capture.sh /bin/capture.sh
+chmod +x /bin/capture.sh
