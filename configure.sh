@@ -19,3 +19,4 @@ echo "tcpdump -i $wanint -w ./wan.pcap" >> ./bin/capture.sh
 echo "tcpdump -i $lanint -w ./lan.pcap" >> ./bin/capture.sh
 cp ./bin/capture.sh /bin/capture
 chmod +x /bin/capture
+cp /config/dhcpd.conf /etc/dhcpd.conf
