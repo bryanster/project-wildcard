@@ -1,4 +1,10 @@
 #!/bin/ksh
+#
+# Title:           configuring openbsd router
+# Author:        Bryanster
+# Version:       1.0
+#
+
 #configure router 
 echo 'net.inet.ip.forwarding=1' >> /etc/sysctl.conf
 echo "what is your wan interface"
