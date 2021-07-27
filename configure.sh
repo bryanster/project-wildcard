@@ -1,6 +1,6 @@
 #!/bin/ksh
 #
-# Title:           configuring openbsd router
+# Title:         configuring openbsd router
 # Author:        Bryanster
 # Version:       1.0
 #
@@ -51,6 +51,12 @@ cp ./blacklist.sh /bin/blacklist.sh
 crontab -l > mycron
 #echo new cron into cron file
 echo "* * * * * /bin/blacklist.sh >/dev/null 2>&1" >> mycron
+
 #install new cron file
 crontab mycron
 rm mycron
+
+#configure suricata
+rcctl enable suricata
+rcctl set suricata flags -i $wanint
+
