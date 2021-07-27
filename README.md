@@ -21,8 +21,10 @@ run the configurar
     sh ./configure.sh
   
   
+started adding suricata as NGFW provider(IDS/IPS)
+
 status:Default router functionality
   
   
   links  
-  https://www.openbsd.org/faq/pf/example1.html
+  [openbsd](https://www.openbsd.org/faq/pf/example1.html)
