@@ -1,6 +1,6 @@
 #!/bin/ksh
 #
-# Title:           install components 
+# Title:         install components 
 # Author:        Bryanster
 # Version:       1.0
 #
