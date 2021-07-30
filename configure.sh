@@ -52,13 +52,11 @@ cp ./Blocked/* /var/www/htdocs/blocked/
 # add blacklist to cron
 chmod +x ./blacklist.sh
 cp ./blacklist.sh /bin/blacklist
-cp ./pfupdate.sh /bin/pfupdate
 
 #setup crontab
 crontab -l > mycron
 echo "#blacklist update script"
 echo "* * * * * /bin/blacklist >/dev/null 2>&1" >> mycron
-echo "* * * * * /bin/pfupdate >/dev/null 2>&1" >> mycron
 
 
 
