@@ -25,7 +25,9 @@ pfctl -f /etc/pf.conf
 #configure dhcpd
 cp ./config/dhcpd.conf /etc/dhcpd.conf
 
-
+#configure dhclient to work with pf rules
+cp /etc/examples/dhclient.conf /etc/dhclient.conf
+echo "supersede domain-name-server 127.0.0.1;" >> /etc/dhclient.conf
 
 #setup unbound
 rcctl enable unbound
