@@ -52,7 +52,7 @@ cp ./Blocked/* /var/www/htdocs/blocked/
 
 #setting blacklist directory
 mkdir /etc/blacklist
-git clone https://github.com/bryanster/brienlist.git /etc/blacklist
+git clone https://github.com/bryanster/brienlist.git /etc/brienlist
 
 # add blacklist to cron
 chmod +x ./blacklist.sh
