@@ -3,8 +3,6 @@
 //  Author:        bryanster
 //  Version:       1.0
 var express = require('express'),
-    routes = require('./routes'),
-    upload = require('./routes/upload'),
     http = require('http'),
     https = require('https'),
     fs = require('fs'),
@@ -40,8 +38,9 @@ if('development' == app.get('env')) {
     app.use(express.errorHandler());
 }
 
-app.get('/', routes.index);
-app.post('/upload', upload.s3);
+app.get("/",  (req, res) => {
+    res.send(`this is server: ${hostname} `);
+})
 
 
 http.createServer(httpApp).listen(httpApp.get('port'), function() {
