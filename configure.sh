@@ -1,6 +1,6 @@
 #!/bin/ksh
 #
-# Title:         configuring openbsd router
+# Title:         configuring openbsd firewall
 # Author:        Bryanster
 # Version:       1.0
 #
