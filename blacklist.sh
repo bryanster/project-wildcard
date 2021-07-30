@@ -4,5 +4,5 @@
 # Author:        Bryanster
 # Version:       1.0
 #
-cd /etc/blacklist
+cd /etc/brienlist
 git pull
