@@ -50,9 +50,13 @@ rcctl start httpd
 mkdir /var/www/htdocs/blocked
 cp ./Blocked/* /var/www/htdocs/blocked/
 
-#setting blacklist directory
-mkdir /etc/blacklist
+#setting brienlist blacklist directory
+mkdir /etc/brienlist
 git clone https://github.com/bryanster/brienlist.git /etc/brienlist
+
+#setting notrack blacklist directory
+mkdir /etc/notrack
+git clone https://github.com/notracking/hosts-blocklists.git /etc/notrack
 
 # add blacklist to cron
 chmod +x ./blacklist.sh
