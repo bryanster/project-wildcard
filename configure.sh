@@ -67,3 +67,5 @@ rm mycron
 rcctl enable suricata
 rcctl set suricata flags -i $wanint
 
+#change message of the day
+cp ./config/motd /etc/motd
