@@ -14,7 +14,7 @@ var express = require('express'),
 
 var httpsOptions = {
     key: fs.readFileSync(path.join(certPath, "server.key")),
-    cert: fs.readFileSync(path.join(certPath, "server.crt"))
+    cert: fs.readFileSync(path.join(certPath, "server.cert"))
 };
 httpApp.set('port', process.env.PORT || 80);
 httpApp.get("*", function (req, res, next) {
