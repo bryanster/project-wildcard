@@ -4,6 +4,10 @@
 # Author:        Bryanster
 # Version:       1.0
 #
+#update notrack list
+cd /etc/notrack
+git pull
+#update brienlist
 cd /etc/brienlist
 git pull
 #create ublacklist
