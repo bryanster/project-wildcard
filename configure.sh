@@ -65,7 +65,7 @@ cp ./blacklist.sh /bin/blacklist
 #setup crontab
 crontab -l > mycron
 echo "#blacklist update script"
-echo "* * * * * /bin/blacklist >/dev/null 2>&1" >> mycron
+echo "10,20,30,40,50, * * * * /bin/blacklist >/dev/null 2>&1" >> mycron
 
 
 
