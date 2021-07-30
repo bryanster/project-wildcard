@@ -14,9 +14,15 @@ read lanint
 rcctl enable dhcpd
 rcctl set dhcpd flags $lanint
 echo "inet 192.168.255.254 255.255.255.0 NONE" > /etc/hostname.$lanint
-echo "wan = $wanint" > /etc/pf.conf
-echo "lan = $lanint" >> /etc/pf.conf
+
+#configure pf
+mkdir /etc/pf
+echo "wan = $wanint" > /etc/pf/interfacemap.conf
+echo "lan = $lanint" >> /etc/pf/interfacemap.conf
 cat ./config/pf.conf >> /etc/pf.conf
+pfctl -f /etc/pf.conf
+
+#configure dhcpd
 cp ./config/dhcpd.conf /etc/dhcpd.conf
 
 
