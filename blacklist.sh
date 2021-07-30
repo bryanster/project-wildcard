@@ -5,7 +5,8 @@
 # Version:       1.0
 #
 #update notrack list
-https://raw.githubusercontent.com/notracking/hosts-blocklists/master/unbound/unbound.blacklist.conf > /etc/notrack/unbound.blacklist.conf
+cd /etc/notrack
+git pull
 
 #update brienlist
 cd /etc/brienlist
