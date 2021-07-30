@@ -15,4 +15,4 @@ file="/etc/brienlist/dblacklist"
 while IFS= read -r line
 do
     echo "local-data: $line A 192.168.255.254" >> /etc/brienlist/ublacklist
-done 
+done <"$file"
