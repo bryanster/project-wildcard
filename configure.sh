@@ -56,6 +56,7 @@ cp ./blacklist.sh /bin/blacklist.sh
 #write out current crontab
 crontab -l > mycron
 #echo new cron into cron file
+echo "#blacklist update script"
 echo "* * * * * /bin/blacklist.sh >/dev/null 2>&1" >> mycron
 
 #install new cron file
