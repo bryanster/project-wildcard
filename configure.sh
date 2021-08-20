@@ -6,6 +6,8 @@
 #
 #
 #configure router 
+
+
 echo 'net.inet.ip.forwarding=1' >> /etc/sysctl.conf
 echo "what is your wan interface"
 read wanint
