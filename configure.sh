@@ -81,3 +81,8 @@ rcctl set suricata flags -i $wanint
 
 #change message of the day
 cp ./config/motd /etc/motd
+
+#installing project-wildcard api
+mkdir /etc/project-wildcard/
+cp ./config/mapi.json /etc/project-wildcard/mapi.json
+npm install --prefix ./backend
