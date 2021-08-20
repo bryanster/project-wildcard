@@ -51,12 +51,12 @@ mkdir /var/www/htdocs/blocked
 cp ./Blocked/* /var/www/htdocs/blocked/
 
 #setting brienlist blacklist directory
-mkdir /etc/brienlist
-git clone https://github.com/bryanster/brienlist.git /etc/brienlist
+mkdir /home/brienlist
+git clone https://github.com/bryanster/brienlist.git /home/brienlist
 
 #setting notrack blacklist directory
-mkdir /etc/notrack
-git clone https://github.com/notracking/hosts-blocklists.git /etc/notrack
+mkdir /home/notrack
+git clone https://github.com/notracking/hosts-blocklists.git /home/notrack
 
 # add blacklist to cron
 chmod +x ./blacklist.sh

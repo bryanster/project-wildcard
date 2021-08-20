@@ -5,23 +5,23 @@
 # Version:       1.0
 #
 #update notrack list
-cd /etc/notrack
+cd /home/notrack
 git pull
 
 #update brienlist
-cd /etc/brienlist
+cd /home/brienlist
 git pull
 #create ublacklist
-rm /etc/brienlist/ublacklist
-touch /etc/brienlist/ublacklist
+rm /home/brienlist/ublacklist
+touch /home/brienlist/ublacklist
 
 file="/etc/brienlist/dblacklist"
 
 while IFS= read -r line
 do
     
-    echo "local-zone: \"$line\" redirect" >> /etc/brienlist/ublacklist
-    echo "local-data: \"$line A 192.168.255.254\"" >> /etc/brienlist/ublacklist
+    echo "local-zone: \"$line\" redirect" >> /home/brienlist/ublacklist
+    echo "local-data: \"$line A 192.168.255.254\"" >> /home/brienlist/ublacklist
 
 done <"$file"
 rcctl restart unbound
