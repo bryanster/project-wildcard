@@ -25,7 +25,9 @@ async function main() {
     //     console.log(`Brynet listening at http://localhost:${port}`)
     // })
     const server = https.createServer({key: key, cert: cert }, app);
-    server.listen(port, () => { console.log('mapi listening at http://localhost:${port}') });
+    server.listen(port, () => { 
+        console.log(`mapi listening at http://localhost:${port}`) 
+    });
 }
 
 main();
