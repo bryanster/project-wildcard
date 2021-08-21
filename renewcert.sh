@@ -11,7 +11,7 @@ state=Holland
 locality=Holland
 organization=Project-wildcard
 organizationalunit=IT
-email=""
+email=certificate@project-wildcard.org
 
 openssl req  -nodes -new -x509  -keyout ./certutil/server.key -out ./certutil/server.cert\
      -subj "/C=$country/ST=$state/L=$locality/O=$organization/OU=$organizationalunit/CN=$commonname/emailAddress=$email"
