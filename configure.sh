@@ -6,9 +6,17 @@
 #
 #
 #configure router 
+#
+#check privileges
+if ! [ $(id -u) = 0 ]; then
+   echo "This script must be run as root"
+   exit 1
+fi
+checksysctl = cat /etc/sysctl.conf
+if[ $checksysctl != 'net.inet.ip.forwarding=1']; then
+    echo 'net.inet.ip.forwarding=1' >> /etc/sysctl.conf
+fi
 
-
-echo 'net.inet.ip.forwarding=1' >> /etc/sysctl.conf
 echo "what is your wan interface"
 read wanint
 echo "what is your lan interface"
