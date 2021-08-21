@@ -87,9 +87,7 @@ mkdir /etc/project-wildcard/
 cp ./config/mapi.json /etc/project-wildcard/mapi.json
 npm install --prefix ./backend
 
-#making self-signed certificate for mapi
+#creating certificate folders for mapi
 mkdir ./certutil
 mkdir /etc/project-wildcard/certificates/
-openssl req  -nodes -new -x509  -keyout ./certutil/server.key -out ./certutil/server.cert
-cp ./certutil/server.key /etc/project-wildcar/certificates/server.key
-cp ./certutil/server.cert /etc/project-wildcar/certificates/server.cert
+./renewcert.sh
