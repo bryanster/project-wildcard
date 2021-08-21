@@ -10,8 +10,8 @@ var os = require("os");
 const app = express()
 async function main() {
     var port = configfile.port
-    const key = fs.readFileSync('/etc/project-wildcard/certificates/key.pem');
-    const cert = fs.readFileSync('/etc/project-wildcard/certificates/cert.pem');
+    const key = fs.readFileSync('/etc/project-wildcard/certificates/server.key');
+    const cert = fs.readFileSync('/etc/project-wildcard/certificates/server.cert');
 
     app.get("/", async (req, res) => {
         res.send(``);

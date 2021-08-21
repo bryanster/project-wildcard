@@ -90,7 +90,6 @@ npm install --prefix ./backend
 #making self-signed certificate for mapi
 mkdir ./certutil
 mkdir /etc/project-wildcard/certificates/
-openssl req -x509 -newkey rsa:2048 -keyout ./certutil/keytmp.pem -out ./certutil/cert.pem -days 365
-openssl rsa -in ./certutil/keytmp.pem -out ./certutil/key.pem
-cp ./certutil/key.pem /etc/project-wildcar/certificates/key.pem
-cp ./certutil/cert.pem /etc/project-wildcar/certificates/cert.pem
+openssl req  -nodes -new -x509  -keyout ./certutil/server.key -out ./certutil/server.cert
+cp ./certutil/server.key /etc/project-wildcar/certificates/server.key
+cp ./certutil/server.cert /etc/project-wildcar/certificates/server.cert
