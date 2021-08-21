@@ -4,7 +4,7 @@
 # Author:        Bryanster
 # Version:       1.0
 #
-# to create a new certificate and replace existing 
+# to create a new self-signed certificate and replace existing 
 #
 commonname=project-wildcard.local
 country=NL
