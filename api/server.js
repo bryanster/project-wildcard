@@ -2,6 +2,7 @@
 //  Title:        Express backend 
 //  Author:        Bryan van der Net
 //  Version:       1.0
+// 
 const configfile = require('/etc/project-wildcard/mapi.json');
 const express = require('express');
 const fs = require('fs');
@@ -20,10 +21,9 @@ async function main() {
     app.post("/login", async (req, res) => {
         res.send(``);
     })
-
-    // app.listen(port, () => {
-    //     console.log(`Brynet listening at http://localhost:${port}`)
-    // })
+    app.get("/INterfaces", async (req, res) => {
+        res.send(``);
+    })
     const server = https.createServer({key: key, cert: cert }, app);
     server.listen(port, () => { 
         console.log(`mapi listening at http://localhost:${port}`) 

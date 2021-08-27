@@ -93,7 +93,7 @@ cp ./config/motd /etc/motd
 #installing project-wildcard api
 mkdir /etc/project-wildcard/
 cp ./config/mapi.json /etc/project-wildcard/mapi.json
-npm install --prefix ./backend
+npm install --prefix ./api
 
 #creating certificate folders for mapi
 mkdir ./certutil
